@@ -1,0 +1,17 @@
+{
+  "support": "Get Help",
+  "byOpenKind": "By OpenKind",
+  "faq": {
+    "title": "FAQ",
+    "howToContribute": {
+      "trigger": "How can I contribute?",
+      "text": "You can help contribute by helping improve this site or by helping us translate this site to more languages. Any help is much appreciated.",
+      "button": "Contribute"
+    }
+  },
+  "footer": {
+    "initiative": "An OpenKind Initiative",
+    "contributors": "Contributors",
+    "privacyPolicy": "Privacy Policy"
+  }
+}
