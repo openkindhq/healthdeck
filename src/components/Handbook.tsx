@@ -12,24 +12,29 @@ import {
   Input,
 } from "@openkind/components";
 
-
-function Warning(){
-
+function Warning() {
   const { t } = useTranslation();
 
-  return <div className="flex w-full items-center rounded-md bg-red-200/50  text-red-500 dark:text-red-300 text-xs lg:text-sm py-3">
-        <div className="px-3 lg:px-8 text-xl lg:text-2xl font-extrabold">!</div>
-        <div>
+  return (
+    <div className="flex w-full items-center rounded-md bg-red-200/50  py-3 text-xs text-red-500 dark:text-red-300 lg:text-sm">
+      <div className="px-3 text-xl font-extrabold lg:px-8 lg:text-2xl">!</div>
+      <div>
         {t("content.handbook.shortAdvice")}{" "}
         <AlertDialog>
           <AlertDialogTrigger>
-            <Button variant="link" size="sm" className="text-xs lg:text-sm h-6 px-0">
+            <Button
+              variant="link"
+              size="sm"
+              className="h-6 px-0 text-xs lg:text-sm"
+            >
               {t("learnMore")}
             </Button>
           </AlertDialogTrigger>
           <AlertDialogContent>
             <AlertDialogHeader>
-              <AlertDialogTitle>{t("content.handbook.longAdviceTitle")}</AlertDialogTitle>
+              <AlertDialogTitle>
+                {t("content.handbook.longAdviceTitle")}
+              </AlertDialogTitle>
               <AlertDialogDescription>
                 {t("content.handbook.longAdvice")}
               </AlertDialogDescription>
@@ -39,41 +44,37 @@ function Warning(){
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
-        </div>
-        
       </div>
+    </div>
+  );
 }
 
 export default function Handbook() {
-
   const { t } = useTranslation();
 
   return (
     <div className="flex flex-col items-center justify-center space-y-5 py-4 lg:p-20">
-      <div className="flex flex-col w-full space-y-2">
-        <div className="text-3xl font-bold font-heading">
-            {t("content.handbook.title")}
+      <div className="flex w-full flex-col space-y-2">
+        <div className="font-heading text-3xl font-bold">
+          {t("content.handbook.title")}
         </div>
         <div className="text-sm lg:text-base">
-    <div className="text-neutral-400">
+          <div className="text-neutral-400">
             {t("content.handbook.description")}
-            </div>
-              <div className="text-xs text-neutral-400 mt-1 ">
+          </div>
+          <div className="mt-1 text-xs text-neutral-400 ">
             {t("content.handbook.source")}: The net
-            </div>
+          </div>
         </div>
-
-
       </div>
-      
+
       <Input placeholder={t("content.handbook.placeholder")!}></Input>
       <div className="flex w-full rounded-md border border-neutral-200 p-8 dark:border-neutral-700">
         <div>
           <h1 className="font-heading text-2xl font-medium ">Common cold</h1>
         </div>
       </div>
-      <Warning/>
-
+      <Warning />
     </div>
   );
 }

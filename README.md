@@ -1,4 +1,4 @@
-# LifeDash
+# HealthDeck
 
 Based on the [`t3-app`](https://create.t3.gg/).
 

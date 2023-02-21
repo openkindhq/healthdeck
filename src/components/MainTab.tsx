@@ -6,7 +6,7 @@ export default function MainTab() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex items-center justify-center py-10 lg:py-24 w-screen">
+    <div className="flex w-screen items-center justify-center py-10 lg:py-24">
       <Tabs defaultValue="statistics" className="w-[95%] lg:w-4/5 ">
         <div className="flex justify-center">
           <TabsList>
