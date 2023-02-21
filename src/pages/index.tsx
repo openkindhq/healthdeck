@@ -2,6 +2,7 @@ import { type NextPage } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import nextI18nConfig from "../../next-i18next.config.mjs";
 import FAQ from "../components/FAQ";
+import MainTab from "../components/MainTab";
 import Page from "../components/Page";
 
 export const getServerSideProps = async ({ locale }: { locale: string }) => ({
@@ -14,10 +15,10 @@ export const getServerSideProps = async ({ locale }: { locale: string }) => ({
 
 const Home: NextPage = () => {
   return (
-    <Page title="OpenKind" description="Home page">
+    <Page title="HealthDeck" description="Home page">
       <div>
         <main>
-          <div className="h-screen"></div>
+          <MainTab />
         </main>
         <FAQ />
       </div>

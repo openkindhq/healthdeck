@@ -41,7 +41,11 @@ export default function Footer() {
                 </Button>
               </a>
             </Link>
-            <Link href="https://github.com/openkindhq" passHref legacyBehavior>
+            <Link
+              href="https://github.com/openkindhq/healthdeck"
+              passHref
+              legacyBehavior
+            >
               <a>
                 <Button
                   variant="ghost"

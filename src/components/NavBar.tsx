@@ -58,7 +58,7 @@ export default function NavBar() {
       <NavigationMenuList className="flex w-screen justify-around">
         <NavigationMenuItem>
           <Link className="font-heading font-medium lg:text-xl" href="/">
-            LongProjectName{" "}
+            HealthDeck{" "}
           </Link>
           <p className="hidden text-xs text-neutral-500 dark:text-neutral-400 lg:inline">
             {t("byOpenKind")}

@@ -1,6 +1,8 @@
 {
   "support": "Get Help",
   "byOpenKind": "By OpenKind",
+  "close": "Close",
+  "learnMore": "Learn more",
   "faq": {
     "title": "FAQ",
     "howToContribute": {
@@ -13,5 +15,19 @@
     "initiative": "An OpenKind Initiative",
     "contributors": "Contributors",
     "privacyPolicy": "Privacy Policy"
+  },
+  "content": {
+    "statistics": {
+      "title": "Statistics"
+    },
+    "handbook": {
+      "title": "Handbook",
+      "description": "Find detailed information on any condition",
+      "source": "Source",
+      "placeholder": "Name or symptoms of the condition",
+      "shortAdvice": "For informational purposes only. Consult your local medical authority for advice.",
+      "longAdvice": "Medical information on HealthDeck doesn't apply to everyone and isn't medical advice. If you have a medical concern, make sure to contact a healthcare provider. If you think you may have a medical emergency, immediately call your doctor or your local emergency number.",
+      "longAdviceTitle": "This is not medical advice"
+    }
   }
 }

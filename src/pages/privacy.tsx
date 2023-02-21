@@ -13,11 +13,9 @@ export const getServerSideProps = async ({ locale }: { locale: string }) => ({
 
 const Privacy: NextPage = () => {
   return (
-    <Page title="Privacy | OpenKind" description="Home page">
-      <main className="h-screen">
-        {/* 
-            Here goes the content
-            */}
+    <Page title="Privacy | HealthDeck" description="Home page">
+      <main className="flex h-screen justify-center p-24">
+        HealthDeck stores no user data.
       </main>
     </Page>
   );
