@@ -18,6 +18,7 @@
     "@trpc/react-query": "^10.9.0",
     "@trpc/server": "^10.9.0",
     "components": "https://github.com/openkindhq/components",
+    "fuse.js": "^6.6.2",
     "i18next": "^22.4.9",
     "lucide-react": "^0.114.0",
     "next": "13.1.6",

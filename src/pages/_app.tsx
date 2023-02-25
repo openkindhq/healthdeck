@@ -5,11 +5,11 @@ import { appWithTranslation } from "next-i18next";
 
 import nextI18nConfig from "../../next-i18next.config.mjs";
 
-import { Inter, Poppins } from "@next/font/google";
+import { Red_Hat_Display, Poppins } from "@next/font/google";
 
-const inter = Inter({
+const rhd = Red_Hat_Display({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-rhd",
 });
 
 const poppins = Poppins({
@@ -22,7 +22,7 @@ import "../styles/globals.css";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <main className={`${inter.variable} ${poppins.variable} font-main`}>
+    <main className={`${rhd.variable} ${poppins.variable} font-main`}>
       <Component {...pageProps} />
     </main>
   );

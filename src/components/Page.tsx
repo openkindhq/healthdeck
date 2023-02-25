@@ -16,7 +16,7 @@ export default function Page({ children, title, description }: IProps) {
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <div className="flex h-full flex-col justify-between overflow-x-hidden bg-neutral-50 text-neutral-900 dark:bg-darkBg dark:text-white">
+      <div className="flex h-screen flex-col justify-between overflow-x-hidden bg-neutral-50 text-neutral-900 dark:bg-darkBg dark:text-white">
         <div>
           <NavBar />
           {children}

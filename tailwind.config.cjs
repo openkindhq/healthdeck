@@ -13,7 +13,7 @@ module.exports = {
       },
       fontFamily: {
         main: ["var(--font-poppins)", fontFamily.sans],
-        heading: ["var(--font-inter)", fontFamily.sans],
+        heading: ["var(--font-rhd)", fontFamily.sans],
       },
     },
   },
