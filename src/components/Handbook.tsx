@@ -23,6 +23,8 @@ import conditions from "../server/api/conditions.json";
 import { api } from "../utils/api";
 import Link from "next/link";
 
+import { Command as RawCommand } from "cmdk";
+
 function Warning() {
   const { t } = useTranslation();
 
@@ -64,7 +66,7 @@ export default function Handbook() {
   const { t } = useTranslation();
 
   const [searchBarValue, setSearchBarValue] = useState("");
-  const [popupState, setPopupState] = useState(true);
+  const [popupState, setPopupState] = useState(false);
 
   const [currentCondition, setCurrentCondition] = useState(conditions[60]);
 
@@ -112,7 +114,14 @@ export default function Handbook() {
             value={searchBarValue}
           />
           <CommandList>
-            {searchBarValue != "" && popupState == true ? (
+            {results.isLoading && popupState == true && (
+              <RawCommand.Loading>
+                <div className="h-10 animate-pulse bg-neutral-800" />
+              </RawCommand.Loading>
+            )}
+            {searchBarValue != "" &&
+            popupState == true &&
+            !results.isLoading ? (
               <>
                 <CommandEmpty>{t("content.handbook.noResults")}</CommandEmpty>
                 <CommandGroup>
@@ -134,7 +143,7 @@ export default function Handbook() {
         </Command>
       </div>
 
-      <div className="flex w-full h-min flex-col space-y-3 rounded-md border border-neutral-200 p-12 dark:border-neutral-700">
+      <div className="flex w-full flex-col space-y-4 rounded-md border border-neutral-200 p-12 dark:border-neutral-700">
         <h1 className="font-heading text-3xl font-bold">
           {currentCondition?.title}
         </h1>
@@ -146,7 +155,7 @@ export default function Handbook() {
               variant="link"
               className="h-0 w-max px-0 text-sm text-neutral-400"
             >
-              Learn more
+              {t("learnMore")}
             </Button>
           </a>
         </Link>

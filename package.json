@@ -17,6 +17,7 @@
     "@trpc/next": "^10.9.0",
     "@trpc/react-query": "^10.9.0",
     "@trpc/server": "^10.9.0",
+    "cmdk": "^0.1.22",
     "components": "https://github.com/openkindhq/components",
     "fuse.js": "^6.6.2",
     "i18next": "^22.4.9",
