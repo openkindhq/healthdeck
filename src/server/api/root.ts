@@ -1,3 +1,4 @@
+import fetchVirusData from "./routers/fetchVirusData";
 import searchCondition from "./routers/searchCondition";
 import { createTRPCRouter } from "./trpc";
 
@@ -8,6 +9,7 @@ import { createTRPCRouter } from "./trpc";
  */
 export const appRouter = createTRPCRouter({
   searchCondition: searchCondition,
+  fetchVirusData: fetchVirusData,
 });
 
 // export type definition of API

@@ -18,7 +18,12 @@
   },
   "content": {
     "statistics": {
-      "title": "Statistics"
+      "title": "Statistics",
+      "global": "Global COVID-19 Statistics",
+      "c-wise": "Country-wise COVID-19 Statistics",
+      "totalDeaths": "Total Deaths",
+      "totalConfirmed": "Total Confirmed",
+      "country": "Country"
     },
     "handbook": {
       "title": "Handbook",

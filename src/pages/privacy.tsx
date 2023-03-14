@@ -16,7 +16,7 @@ const Privacy: NextPage = () => {
   const { t } = useTranslation();
   return (
     <Page title="Privacy | HealthDeck" description="Our privacy policy">
-      <main className="flex justify-center p-24">
+      <main className="flex justify-center p-24 text-neutral-400">
         {t("privacy.description")}
       </main>
     </Page>

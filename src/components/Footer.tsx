@@ -14,7 +14,11 @@ export default function Footer() {
         </div>
         <div className="items-center space-y-4 lg:flex lg:space-x-8 lg:space-y-0">
           <div className="flex">
-            <Link href="." passHref legacyBehavior>
+            <Link
+              href="https://openkind.now.sh/contributors"
+              passHref
+              legacyBehavior
+            >
               <a>
                 <Button variant="link" size="sm">
                   {t("footer.contributors")}
@@ -42,7 +46,7 @@ export default function Footer() {
               </a>
             </Link>
             <Link
-              href="https://github.com/openkindhq/healthdeck"
+              href="https://github.com/openkindhq/healthdecks"
               passHref
               legacyBehavior
             >

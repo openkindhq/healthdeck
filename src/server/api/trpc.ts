@@ -35,7 +35,24 @@ type CreateContextOptions = Record<string, never>;
  *
  * @see https://create.t3.gg/en/usage/trpc#-servertrpccontextts
  */
-const createInnerTRPCContext = (_opts: CreateContextOptions) => {
+
+interface Context {
+  fuse: Fuse<
+    | {
+        title: string;
+        href: string;
+        index: number;
+        desc: string;
+      }
+    | {
+        title: string;
+        href: string;
+        index: number;
+        desc?: undefined;
+      }
+  >;
+}
+const createInnerTRPCContext = (_opts: CreateContextOptions): Context => {
   return {
     fuse: new Fuse(conditions, { keys: ["title"], threshold: 0.3 }),
   };
@@ -66,6 +83,16 @@ const t = initTRPC.context<typeof createTRPCContext>().create({
     return shape;
   },
 });
+
+interface Cache {
+  data?: object;
+  updatedAt?: Date;
+}
+
+export const dataCache: Cache = {
+  data: undefined,
+  updatedAt: undefined,
+};
 
 /**
  * 3. ROUTER & PROCEDURE (THE IMPORTANT BIT)

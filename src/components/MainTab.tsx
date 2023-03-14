@@ -2,6 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@openkind/components";
 import { useTranslation } from "next-i18next";
 import Handbook from "./Handbook";
 import Map from "./Map";
+import Statistics from "./Statistics";
 
 export default function MainTab() {
   const { t } = useTranslation();
@@ -20,7 +21,9 @@ export default function MainTab() {
             <TabsTrigger value="map">{t("content.map.title")}</TabsTrigger>
           </TabsList>
         </div>
-        <TabsContent value="statistics"></TabsContent>
+        <TabsContent value="statistics">
+          <Statistics />
+        </TabsContent>
         <TabsContent value="handbook">
           <Handbook />
         </TabsContent>
