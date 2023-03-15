@@ -15,7 +15,7 @@ export const getServerSideProps = async ({ locale }: { locale: string }) => ({
 
 const Home: NextPage = () => {
   return (
-    <Page title="HealthDeck" description="Home page">
+    <Page title="HealthDeck" description="Dashboard for general health metrics and information">
       <div>
         <main>
           <MainTab />
