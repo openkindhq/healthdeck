@@ -9,7 +9,7 @@ import {
   SelectContent,
   SelectItem,
 } from "@openkind/components";
-
+import Google_Telement from '../pages/google'
 import { Sun, Moon } from "lucide-react";
 
 import Link from "next/link";
@@ -21,7 +21,6 @@ function Language({ code, name }: { code: string; name: string }) {
   return (
     <>
       <code>{code}</code> <p className="hidden lg:inline">{name}</p>
-    
     </>
   );
 }
@@ -53,7 +52,6 @@ export default function NavBar() {
       setTheme("light");
     }
   };
-  
 
   return (
     <NavigationMenu className="h-16 border-b-[0.25px] border-neutral-300 bg-white text-neutral-900 dark:border-neutral-800 dark:bg-black/10 dark:text-neutral-50">
@@ -76,9 +74,10 @@ export default function NavBar() {
               )}
             </Button>
           </NavigationMenuItem>
-         
+<NavigationMenuItem>
+<Google_Telement />
+</NavigationMenuItem>
           <NavigationMenuItem>
-
             <Select onValueChange={languageChange}>
               <SelectTrigger className="w-full lg:w-28">
                 <SelectValue
@@ -93,6 +92,7 @@ export default function NavBar() {
             </Select>
           </NavigationMenuItem>
 
+
           <NavigationMenuItem>
             <Link href="https://discord.gg/R4wJ2TDshg" passHref legacyBehavior>
               <a>
@@ -103,6 +103,5 @@ export default function NavBar() {
         </NavigationMenuList>
       </NavigationMenuList>
     </NavigationMenu>
-    
   );
 }
