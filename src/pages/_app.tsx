@@ -19,12 +19,17 @@ const poppins = Poppins({
 });
 
 import "../styles/globals.css";
-
+import Head from "next/head";
+import React from "react";
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
+  <React.StrictMode>
+
     <main className={`${rhd.variable} ${poppins.variable} font-main`}>
+  
       <Component {...pageProps} />
     </main>
+  </React.StrictMode>  
   );
 };
 

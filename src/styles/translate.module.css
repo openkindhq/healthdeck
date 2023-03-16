@@ -1,0 +1,16 @@
+#google_translate_element select {
+    /* Add your styles for the select element here */
+}
+
+#google_translate_element div {
+    /* Add your styles for the div elements here */
+}
+
+#google_translate_element img{
+    /* Add your styles for the span elements here */
+    display: none;
+}
+
+.goog-te-gadget {
+    display: none !important;
+}

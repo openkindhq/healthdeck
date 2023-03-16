@@ -21,6 +21,7 @@ function Language({ code, name }: { code: string; name: string }) {
   return (
     <>
       <code>{code}</code> <p className="hidden lg:inline">{name}</p>
+    
     </>
   );
 }
@@ -52,6 +53,7 @@ export default function NavBar() {
       setTheme("light");
     }
   };
+  
 
   return (
     <NavigationMenu className="h-16 border-b-[0.25px] border-neutral-300 bg-white text-neutral-900 dark:border-neutral-800 dark:bg-black/10 dark:text-neutral-50">
@@ -74,7 +76,9 @@ export default function NavBar() {
               )}
             </Button>
           </NavigationMenuItem>
+         
           <NavigationMenuItem>
+
             <Select onValueChange={languageChange}>
               <SelectTrigger className="w-full lg:w-28">
                 <SelectValue
@@ -99,5 +103,6 @@ export default function NavBar() {
         </NavigationMenuList>
       </NavigationMenuList>
     </NavigationMenu>
+    
   );
 }

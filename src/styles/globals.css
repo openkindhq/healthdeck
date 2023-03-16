@@ -20,3 +20,7 @@
 tr:nth-child(even) {
   @apply bg-neutral-200 dark:bg-neutral-900;
 }
+
+.goog-te-gadget img{
+  display: none !important;
+}
