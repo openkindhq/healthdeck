@@ -24,7 +24,7 @@ export default createTRPCRouter({
         .then((res) => res.json())
         .then((data) => {
           if ((data as Data).Message === "Caching in progress") {
-            return {
+            return dataCache.data || {
               Global: {
                 TotalConfirmed: 0,
                 TotalDeaths: 0,
