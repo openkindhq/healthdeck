@@ -24,13 +24,16 @@ export default createTRPCRouter({
         .then((res) => res.json())
         .then((data) => {
           if ((data as Data).Message === "Caching in progress") {
-            return dataCache.data || {
-              Global: {
-                TotalConfirmed: 0,
-                TotalDeaths: 0,
-              },
-              Countries: [],
-            } as Data;
+            return (
+              dataCache.data ||
+              ({
+                Global: {
+                  TotalConfirmed: 0,
+                  TotalDeaths: 0,
+                },
+                Countries: [],
+              } as Data)
+            );
           }
           dataCache.data = data as Data;
           dataCache.updatedAt = new Date();

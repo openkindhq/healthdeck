@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="items-center space-y-4 lg:flex lg:space-x-8 lg:space-y-0">
           <div className="flex">
             <Link
-              href="https://openkind.now.sh/contributors"
+              href="https://openkind.org/contributors"
               passHref
               legacyBehavior
             >
