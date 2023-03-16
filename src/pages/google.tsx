@@ -41,11 +41,9 @@ function MyApp() {
 
     const removeScript = () => {
       const q = document.getElementById(id);
-      if (q)
-        q.remove();
+      if (q) q.remove();
       const w = document.getElementById("google_translate_element");
-      if (w)
-        w.innerHTML = "";
+      if (w) w.innerHTML = "";
     };
 
     isFallback || addScript();
@@ -59,12 +57,7 @@ function MyApp() {
     };
   }, []);
 
-  return (
-
-    <div id="google_translate_element"></div>
-
-
-  );
+  return <div id="google_translate_element"></div>;
 }
 
 export default MyApp;

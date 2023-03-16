@@ -9,7 +9,7 @@ import {
   SelectContent,
   SelectItem,
 } from "@openkind/components";
-import Google_Telement from '../pages/google'
+import Google_Telement from "../pages/google";
 import { Sun, Moon } from "lucide-react";
 
 import Link from "next/link";
@@ -74,9 +74,9 @@ export default function NavBar() {
               )}
             </Button>
           </NavigationMenuItem>
-<NavigationMenuItem>
-<Google_Telement />
-</NavigationMenuItem>
+          <NavigationMenuItem>
+            <Google_Telement />
+          </NavigationMenuItem>
           <NavigationMenuItem>
             <Select onValueChange={languageChange}>
               <SelectTrigger className="w-full lg:w-28">
@@ -91,7 +91,6 @@ export default function NavBar() {
               </SelectContent>
             </Select>
           </NavigationMenuItem>
-
 
           <NavigationMenuItem>
             <Link href="https://discord.gg/R4wJ2TDshg" passHref legacyBehavior>
