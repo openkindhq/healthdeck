@@ -36,13 +36,13 @@ export default function Statistics() {
             <div className="mt-4 flex flex-col  lg:mt-0 lg:flex-row">
               <div className="items-centerr flex w-full flex-col justify-center">
                 <div className="h-1/2 w-full space-y-2">
-                  <div className="flex h-1/2 animate-pulse flex-col items-center justify-center space-y-2 rounded-md bg-yellow-500/30 p-4 lg:items-start lg:p-0 lg:pl-12">
+                  <div className="flex h-1/2 flex-col items-center justify-center space-y-2 rounded-md bg-yellow-300/60 p-4 lg:items-start lg:p-0 lg:pl-12">
                     <label className="font-bold">
                       {t("content.statistics.totalConfirmed")}
                     </label>
                     <label>{data.Global.TotalConfirmed}</label>
                   </div>
-                  <div className="flex h-1/2 animate-pulse flex-col items-center justify-center space-y-2 rounded-md  bg-red-500/30 p-4 lg:items-start lg:p-0 lg:pl-12">
+                  <div className="flex h-1/2 flex-col items-center justify-center space-y-2 rounded-md  bg-red-300/60 p-4 lg:items-start lg:p-0 lg:pl-12">
                     <label className="font-bold">
                       {t("content.statistics.totalDeaths")}
                     </label>
